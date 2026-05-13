@@ -1,6 +1,6 @@
 package com.atividade.luis.services;
 
-import com.atividade.luis.models.ProdutoModel;
+import com.atividade.luis.models.PessoaModel;
 import com.atividade.luis.repositories.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,12 +13,12 @@ public class ProdutoService {
     @Autowired
     ProdutoRepository produtoRepository;
 
-    public List<ProdutoModel> findAll() {
+    public List<PessoaModel> findAll() {
         return produtoRepository.findAll();
     }
 
-    public ProdutoModel criarProduto(ProdutoModel produtoModel) {
-        return produtoRepository.save(produtoModel);
+    public PessoaModel criarProduto(PessoaModel pessoaModel) {
+        return produtoRepository.save(pessoaModel);
     }
 
 }

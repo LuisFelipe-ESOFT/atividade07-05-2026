@@ -1,6 +1,6 @@
 package com.atividade.luis.controllers;
 
-import com.atividade.luis.models.ProdutoModel;
+import com.atividade.luis.models.PessoaModel;
 import com.atividade.luis.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,13 +15,13 @@ public class ProdutoController {
     private ProdutoService produtoService;
 
     @GetMapping
-    public List<ProdutoModel> findAll() {
+    public List<PessoaModel> findAll() {
         return produtoService.findAll();
     }
 
     @PostMapping
-    public ProdutoModel criarProduto(@RequestBody ProdutoModel produtoModel) {
-        return produtoService.criarProduto(produtoModel);
+    public PessoaModel criarProduto(@RequestBody PessoaModel pessoaModel) {
+        return produtoService.criarProduto(pessoaModel);
     }
 
 }
